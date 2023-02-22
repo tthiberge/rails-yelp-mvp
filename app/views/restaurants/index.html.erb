@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light sticky-top p-3">
+  YELP - Restaurants
+
+
+<%= link_to new_restaurant_path do  %>
+<div class="btn btn-primary">Add new restaurant</div>
+<% end  %>
+
+
+</nav>
+
+<div class="container">
+<h1 class="py-3">Restaurants#index</h1>
+
+
+
+  <ul>
+    <% @restaurants.each do |restaurant|%>
+      <%= link_to restaurant_path(restaurant) do  %>
+        <li><%= restaurant.name %> <br>
+        <%= restaurant.address %> <br>
+        <%= restaurant.category %> <br>
+        <%= restaurant.phone_number %> <br>
+        </li>
+      <% end %>
+    <% end  %>
+  </ul>
+</div>
